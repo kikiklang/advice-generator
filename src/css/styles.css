@@ -1,0 +1,117 @@
+/* ************************************************* */
+/* imports                                           */
+/* ************************************************* */
+
+@import "./globals/reset.css";
+@import "./globals/colors.css";
+
+/* ************************************************* */
+/* common                                            */
+/* ************************************************* */
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Manrope, sans-serif;
+  background-color: var(--neutral-2);
+  -webkit-font-smoothing: antialiased;
+}
+
+.advice-wrapper {
+  position: relative;
+  top: -15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 535px;
+  height: 329px;
+  background-color: var(--neutral-1);
+  border-radius: 8px;
+}
+
+.advice-title {
+  margin-top: 45px;
+  color: var(--primary-1);
+  font-size: 0.75rem;
+  letter-spacing: 0.29rem;
+  text-transform: uppercase;
+}
+
+.advice-sentence {
+  height: 120px;
+  margin-top: 23px;
+  padding: 0 3rem;
+  color: var(--primary-0);
+  font-size: 1.9rem;
+  line-height: 1.28;
+  letter-spacing: -0.089rem;
+  text-align: center;
+}
+
+.advice-sentence::before { content: "\201C"; }
+.advice-sentence::after { content: "\201D"; }
+
+.advice-divider {
+  margin-top: 39px;
+}
+
+.advice-action {
+  position: relative;
+  top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  background-color: var(--primary-1);
+  border: 1px solid transparent;
+  border-radius: 50%;
+  outline: none;
+  transition: 200ms;
+}
+
+.advice-action:hover {
+  box-shadow:
+    0 0 2px hsl(150deg 100% 66% / 22%),
+    0 0 10px hsl(150deg 100% 66% / 22.8%),
+    0 0 16px hsl(150deg 100% 66% / 23.5%),
+    0 0 26px hsl(150deg 100% 66% / 24.2%),
+    0 0 48px hsl(150deg 100% 66% / 25%);
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  body {
+    padding: 0 1rem 5.9rem;
+  }
+
+  .advice-wrapper {
+    top: -8px;
+    height: 315px;
+  }
+
+  .advice-title {
+    margin-top: 37px;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+  }
+
+  .advice-sentence {
+    height: 120px;
+    margin-top: 23px;
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    line-height: 1.38;
+    letter-spacing: -0.025rem;
+  }
+
+  .advice-divider {
+    margin-top: 35px;
+  }
+
+  .advice-action {
+    top: 32px;
+  }
+}
